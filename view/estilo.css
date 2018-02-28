@@ -1,0 +1,288 @@
+   /* body {
+      display: flex;
+      min-height: 100vh;
+      flex-direction: column;
+    }
+
+    main {
+      flex: 1 0 auto;
+    }
+
+    body {
+      background: #fff;
+    }
+
+    .input-field input[type=date]:focus + label,
+    .input-field input[type=text]:focus + label,
+    .input-field input[type=email]:focus + label,
+    .input-field input[type=password]:focus + label {
+      color: #e91e63;
+    }
+
+    .input-field input[type=date]:focus,
+    .input-field input[type=text]:focus,
+    .input-field input[type=email]:focus,
+    .input-field input[type=password]:focus {
+      border-bottom: 2px solid #e91e63;
+      box-shadow: none;
+    }
+    
+    .menu ul{
+      list-style:none;
+      margin:0;
+      padding:0px;
+      margin:0px;
+    }
+    .menu ul li{
+      padding:15px;
+      position: relative;
+      width:200px;
+      background-color: #34495E;
+      border-top:1px solid #BDC3C7;
+      
+    }
+    .menu ul li a{
+      color:#FFF;
+      text-decoration:none;
+    }*/
+    *{
+	margin: 0px;
+	padding: 0px;
+	font-family: verdana;
+}
+body{
+	background-color: #E9EAEC;
+	background-image: url('../preview/seigaiha.png');
+}
+header{
+	margin-top: 80px;
+	margin:left;
+	width: 115px;
+	height: 600px;
+	background-color: #4CAF50;
+	position:fixed;
+	/*z-index: 100;*/
+	/*display: none !important;*/
+}
+@media (max-width: 1000px) and (min-width: 50px) {
+header{
+display: none !important;
+}}
+div.contenedor{
+	width: 115px;
+	height: 100px;
+	float:left;
+	-webkit-transition:width.4s;
+}
+div#cuenta{
+	background-color:#4CAF50;
+	height: 200px;
+}
+div#dos{
+	background-color: #388E3C;
+}
+div#tres{
+	background-color: #388E3C;
+}
+div#cuatro{
+	background-color: #388E3C;
+}
+div#cinco{
+	background-color: #388E3C;
+}
+div#seis{
+	background-color: #388E3C;
+}
+img.icon{
+	display:block;
+	margin:15px auto;
+	background-color:rgba(255,255,255,0.15);
+	width: 35px;
+	padding:5px;
+	/*-webkit-border-radius: 50%;*/
+	-webkit-box-shadow: 0px 0px 0px 15px rgba(255,255,255,0);
+	-webkit-transition: box-shadow .4s;
+}
+p.texto{
+	font-size: 0.9em;
+	color:white;
+	text-align:center;
+	opacity:.6;
+	-webkit-transition: padding-left .4s;
+}
+div.contenedor:hover{
+	width: 220px;
+}
+div.contenedor:hover p.texto{
+	padding-left: 10px;
+
+}
+div.contenedor:hover img.icon{
+	-webkit-box-shadow:0px 0px 0px 0px rgba(255,255,255,.6);
+}
+.logout{
+	background-color:#388E3C;
+	display:block;
+	margin:15px auto;
+	/*background-color:rgba(255,255,255,0.15);*/
+	width: 35px;
+	padding:5px;
+	-webkit-border-radius: 50%;
+
+}
+section{
+	margin-left:115px;
+	margin-top:35px;
+}
+.estadisticas{
+    background-color:white;
+}
+.busqueda{
+    padding-bottom:20px;
+}
+/*.Logo{
+    width:500px;
+    background-color:black;
+}*/
+.saludologin{
+  color:#388E3C;
+}
+.linkslogin{
+  color:#4CAF50;
+}
+.input{
+  background-color:#388E3C;
+}
+.loginimg{
+  width:60px;
+}
+.logohospital{
+  width:100px;
+  display: inline-block;
+    margin-right: 20px;
+}
+/* estilo para los formularios aqui abajo */
+.cuadroform{
+  background-color:#fff;
+  border-radius:2%;
+  padding-left:20px;
+  padding-top:20px;
+  padding-right:25px;
+  
+}
+.legendform{
+  background-color:#353F40;
+  border-radius:2%;
+  padding-left:10px;
+  padding-top:10px;
+  padding-right:15px;
+  z-index:100;
+}
+.mFormulario{
+    display: block; 
+    padding: top; 
+    margin-top: 45px;
+}
+div#grey{
+    background-color:#EDEEEF;
+    border-radius:5%;
+}
+
+/* AQUI PONDRE EL CODIGO DEL PANEL DE AYUDA o help_panel ESTA BASADO EN EL BANNER DEL PERFIL */
+.helppanel:hover{
+  width: 150px;
+  
+}
+.question{
+  display:block;
+	margin:15px auto;
+}
+.question-text{
+  font-size: 0.9em;
+	color:white;
+	text-align:center;
+}
+.noDecoration{
+    text-decoration:none;
+}
+.citasNuevaBlock{
+  padding: 30px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.citasNuevasInput{
+  max-width: 400px;
+}
+/* CODIGO PARA EL FONDO ANIMADO DEL LOGIN*/
+@keyframes animatedBackground {
+	from { background-position: 0 0; }
+	to { background-position: 100% 0; }
+}
+		#animate-area	{ 
+			width: 560px; 
+			height: 400px; 
+			background-image: url('../view/img/nubes.jpg');
+			background-position: 0px 0px;
+			background-repeat: repeat-x;
+
+			animation: animatedBackground 40s linear infinite;
+			-ms-animation: animatedBackground 40s linear infinite;
+			-moz-animation: animatedBackground 40s linear infinite;
+			-webkit-animation: animatedBackground 40s linear infinite;
+		}
+.desarrolladores{
+    margin-top:10px;
+      text-align: center;
+      color: #C0C0C0;
+}
+.verdeSecundario{
+    color: #6DAEB0;
+}
+/*estilo para el check de los formularios*/
+img.checked{
+    width: 50px;
+    height: 50px;
+}
+/* haciendole la tearea a los demas v0.1*/
+        
+     }
+      @media(min-width:245px) and (max-width: 409px){
+              .resultados2{
+            margin: auto;
+            margin-top:50px;
+            width: 250px;
+        }
+         .caja2 select{
+            width: 100%;
+            font-size: 16px;
+            padding: 5px;
+        }
+     
+     }
+     @media(min-width:410px) and (max-width:480px) {
+              .resultados2{
+            margin: auto;
+            margin-top:50px;
+            width: 400px;
+        }
+         .caja2 select{
+            width: 100%;
+            font-size: 16px;
+            padding: 5px;
+          }
+
+      @media(min-width: 767px){
+              .resultados2{
+            margin: auto;
+            margin-top:50px;
+            width:300px;
+        }
+         .caja2 select{
+            width: 100%;
+            font-size: 16px;
+            padding: 5px;
+        }
+     
+     }
+   
+       

@@ -1,0 +1,172 @@
+<?php include(CABECERA_CORE . 'public/cabecera.html');?>
+<body>
+	<!--  --><!-- Menu Principal  -->
+	<div class="container">
+		<?php include(HTML_CORE . 'overall/topnav.php'); ?>
+	
+		<!-- Opciones -->
+		<section>
+		   <?php
+		  if(isset($_GET["content"]) && $_GET["content"] == "formAddPac"){
+                ?>
+                <h3>Aqui va l form de agregar paciente</h3>
+                <?php
+            }else{
+                ?>
+                <h1>Hola cristofer, aun no has solicitdo ningun proceso</h1>
+                <?php
+            }
+		   ?>
+			
+		</section>
+	</div>
+	<?php include(FOOTER_CORE . 'public/footer.html') ?>
+	
+	
+	
+	
+	<select name="rpestado" class="browser-default col s12 m12 l12" title="Estado">
+			                  <option value="" disabled selected>Seleccione Estado</option>
+			                  	<?php 
+					                  $estado="SELECT cod_estado, nombre_estado FROM estado ORDER BY cod_estado ASC";
+					                  	$query_estado= $mysqli->query($estado);
+					                  
+					                  while ($select_estado=mysqli_fetch_assoc($query_estado)) {
+					                  	echo "<option value='".$select_estado['cod_estado']."'>".$select_estado['nombre_estado']."</option>";
+					                  }
+			                  	?>
+			               </select>
+			               
+			               
+	<select name="rpciudad" class="browser-default col s12 m12 l12" title="Ciudad">
+			                  <option value="" disabled selected>Ciudad</option>
+			                  <?php 
+					                  $ciudad="SELECT cod_ciudad, nombre_ciudad FROM ciudad_estado ORDER BY nombre_ciudad ASC";
+					                  	$query_ciudad= $mysqli->query($ciudad);
+					                  
+					                  while ($select_ciudad=mysqli_fetch_assoc($query_ciudad)) {
+					                  	echo "<option value='".$select_ciudad['cod_ciudad']."'>".$select_ciudad['nombre_ciudad']."</option>";
+					                  }
+			                  	?>
+			               </select>
+			               
+	<select name="rpmunicipio" class="browser-default col s12 m12 l12" title="Municipio">
+			                  <option value="" disabled selected>Municipio</option>
+			                  	<?php 
+					                  $munic="SELECT cod_municipio, nombre_municipio FROM municipio ORDER BY nombre_municipio ASC";
+					                  	$query_munic= $mysqli->query($munic);
+					                  
+					                  while ($select_munic=mysqli_fetch_assoc($query_munic)) {
+					                  	echo "<option value='".$select_munic['cod_municipio']."'>".$select_munic['nombre_municipio']."</option>";
+					                  }
+			                  	?>
+			               </select>
+	
+	<select name="rpparroq" class="browser-default col s12 m12 l12" title="Parroquia">
+			                  <option value="" disabled selected>Parroquia</option>
+			                  	<?php 
+				                  	  $parroq="SELECT cod_parroquia, nombre_parroquia FROM parroquia ORDER BY nombre_parroquia ASC";
+					                  	$query_parroq= $mysqli->query($parroq);
+					                  
+					                  while ($select_parroq=mysqli_fetch_assoc($query_parroq)) {
+					                  	echo "<option value='".$select_parroq['cod_parroquia']."'>".$select_parroq['nombre_parroquia']."</option>";
+					                  }
+			                  	?>
+			               </select>
+			               
+			               
+			               
+			               
+			               
+			               
+			               
+			                <?php
+                                        $name = $obj->consultar("SELECT d.nombres_doc, d.apellidos_doc, d.cod_usuario  u.cod_usuario FROM doctor as d INNER JOIN usuario  as u ON  u.cod_usuario = d.cod_usuario ");
+                                        foreach ($name as $nombreDoctor) {?>
+                                        <?php echo $nombreDoctor["nombres_doc"]; ?>    
+                                        <?php }?>
+                                        
+                                      <input disabled type="text" class="form-control" id="medico" name="nombreMedico" placeholder="<?php //echo $name["nombres_doc"]; ?>">
+                                      
+                                      
+                                      
+                                      
+                                      $("#").html('');
+                                      
+                                      
+                                      
+                                      
+                                      <!--<section>-->
+    <!--    <div id="modal1" class="modal fade" role="dialog">-->
+    <!--        <div class="modal-dialog  modal-lg">-->
+    <!--            <div class="modal-content">-->
+    <!--                <div class="modal-header">        -->
+    <!--                    <h4 class="text-center" class="formlegend"><img src="preview/report.png"></img>Ordenes Médicas</h4>-->
+    <!--                    <form class="form-horizontal pedriIndicacionesMedicas" role="search" name='form_confir_pedriIndicaMedi' id='formMedGenral' method='POST' action="?view=models&action=registro_pedriIndicaMedi">-->
+    <!--                        <div class="form-group">-->
+    <!--                                <div class="col-sm-3 col-md-5 col-lg-5">-->
+    <!--                                  <input type="text" class="form-control" id="selectInput" placeholder="Hoja N°:">-->
+    <!--                                </div>-->
+    <!--                                <div class="col-sm-3 col-md-5 col-lg-5">-->
+    <!--                                  <input type="text" class="form-control" id="selectInput" placeholder="Historia N°:">-->
+    <!--                                </div> -->
+    <!--                            </div>-->
+    <!--                        <div class="form-group">-->
+    <!--                                <label class="col-sm-1 col-md-1 col-lg-1" for="fechaSalida">Fecha</label>-->
+    <!--                                <div class="col-sm-3 col-md-3 col-lg-3">-->
+    <!--                                  <input class="form-control" id="fechaSalida" type="text" value="<?php //echo date('Y/m/d'); ?>" />-->
+    <!--                                </div>-->
+    <!--                            <div class="col-sm-1 col-md-1 col-lg-1">-->
+    <!--                            <select for="hora" name="hora" class="browser-default" title="Hora">-->
+    <!--                                <option disabled select>Hora:</option>-->
+    <!--                                 <?php-->
+    <!--                                  /*$antPed="SELECT * FROM horas ORDER BY cod_hora ASC";-->
+    <!--                                    $query= $mysqli->query($antPed);-->
+    <!--                                  while ($row=mysqli_fetch_assoc($query)) {-->
+    <!--                                    echo "<option value='".$row['cod_hora']."'>".$row['descripcion']."</option>";-->
+    <!--                                  }-->
+    <!--                            ?>-->
+    <!--                            </select>-->
+    <!--                         </div>-->
+    <!--                        <div class="col-sm-1 col-md-1 col-lg-1">-->
+    <!--                            <select for="periodohora" name="periodohora" class="browser-default" title="Periodo Hora">-->
+    <!--                                <option disabled select>Periodo:</option>-->
+    <!--                                                                     <?php-->
+    <!--                                  $antPed="SELECT * FROM periodo_hora ORDER BY cod_per_hora ASC";-->
+    <!--                                    $query= $mysqli->query($antPed);-->
+    <!--                                  while ($row=mysqli_fetch_assoc($query)) {-->
+    <!--                                    echo "<option value='".$row['cod_per_hora']."'>".$row['descripcion']."</option>";-->
+    <!--                                  }-->
+    <!--                            ?>-->
+    <!--                            </select>-->
+    <!--                        </div>-->
+    <!--                        </div>-->
+    <!--                        <div class="form-group">-->
+    <!--                        <div class="col-sm-6 col-md-10 col-lg-10">-->
+    <!--                               <input type="text" class="form-control" id="selectInput" placeholder="Descripción de las Ordenes Médicas">-->
+    <!--                        </div> -->
+    <!--                    </div>-->
+    <!--                        <div class="form-group">-->
+    <!--                    <div class="col-sm-2 col-md-2 col-lg-2">    -->
+    <!--                    <button type='button' class='btn btn-success' onclick='return confirmar_cita(<?php echo $codigo_cita; ?>);'><?php echo 'Registrar'; ?></button>-->
+    <!--                    </div>-->
+    <!--                    </form>-->
+    <!--                    <div id='' class="col-sm-2 col-md-2 col-lg-2">  -->
+    <!--                       <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>-->
+    <!--                    </div>-->
+    <!--                    </div>-->
+    <!--                </d-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--    </div>-->
+    <!--</section>!-->
+			    	$("#").html('');
+			    	$("#").html('');
+			    	$("#").html('');
+			    	$("#").html('');
+			    	$("#").html('');
+			    	$("#").html('');
+			    	$("#").html('');
+			    	$("#").html('');
+			    	$("#").html('');
+			    	$("#").html('');

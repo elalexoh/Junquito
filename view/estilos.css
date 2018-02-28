@@ -1,0 +1,471 @@
+*{margin:0; padding:0;}
+html{
+	height:100%;
+	
+}
+
+#formPediatria{
+	width:1000px;
+	margin:40px auto;
+	text-align:center;
+	position:relative;
+}
+
+#formPediatria h5, #formPediatria h3{
+	font:22px "Trebuchet MS", tahoma, arial;
+	color: black;
+	width: 100%;
+	float:left;
+	font-size: 12;
+	font-family: Arial, Sans-serif, Verdana;
+	text-align:left;
+	margin-bottom:4%;
+}
+
+#formPediatria h3{
+    color:#333; font-size:20px;
+    
+}
+#formPediatria fieldset{
+    background: white;
+    border: none;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    box-shadow: 0 0 15px 1px rgba(0,0,0, 0.4);
+    padding: 10px 30px;
+    box-sizing: border-box;
+    width: 99%;
+    right: 30px;
+    margin: 15 0%;
+    position:absolute;/*comentar para que los formularios se muestren desplegados*/
+}
+/*descomentar para que los formularios se muestren desplegados*/
+
+#formPediatria fieldset:not(:first-of-type){
+	display:none;
+}
+
+#formPediatria input{
+	padding: 5px;
+	border: 1px solid rgba(46, 156, 133, 0.5);
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	outline: none;
+	box-sizing: border-box;
+	font: 14px "Trebuchet MS", tahoma, arial;
+	color: black;
+	margin-bottom: 5px;
+}
+#buttonOne{
+    color: rgba(0, 0, 0, 0.7);
+    width: 10%;
+    text-transform: uppercase;
+    padding:12px 0;
+    font-weight: bold;
+    margin-left: 55%;
+}
+#btnOne{
+    color: rgba(0, 0, 0, 0.7);
+    width: 10%;
+    text-transform: uppercase;
+    padding:12px 0;
+    font-weight: bold;
+}
+#btnPreview{
+    color: rgba(0, 0, 0, 0.7);
+    width: 10%;
+    text-transform: uppercase;
+    padding:12px 0;
+    font-weight: bold;
+    margin-left: 55%;
+}
+
+#btnTwo{
+    margin-left: 55%;
+}
+label placeholder{
+    font-size: 12px;
+    font-family: Arial;
+}
+
+#formPediatria #next{/*.acao*/
+	background: rgba(38, 128, 101, 0.9);
+	color: white;
+	text-transform: uppercase;
+	font-weight: bold;
+	padding: 12px 0;
+	float: right;
+	margin-right:2%;
+}
+
+#formPediatria #next:hover{
+    background: rgba(52, 177, 140, 0.9);
+    cursor: pointer;
+    
+}
+
+#formPediatria #progreso{
+	margin-bottom:30px;
+	overflow: hidden;
+	counter-reset: step;
+}
+
+#formPediatria #progreso li{
+	list-style-type:none;
+	color:gray;
+	font-weight:bold;
+	font-size: 9px;
+	float:left;
+	width:15%;
+	position:relative;
+}
+
+#formPediatria #progreso li:before{
+	content: counter(step);
+	counter-increment: step;
+	width:30px;
+	display:block;
+	line-height: 20px;
+	background: rgba(39, 174, 96, 0.4);
+	color: #333;
+	border-radius: 30px;
+	-moz-border-radius: 30px;
+	-webkit-border-radius: 30px;
+	margin: 0 auto 10px auto;
+}
+
+#formPediatria #progreso li:after{
+	content: '';
+	width: 100%;
+	background: #cfd8dc;
+	height: 2px;
+	position: absolute;
+	top: 10px;
+	left: -50%;
+	z-index: -1;
+}
+
+#formPediatria #progreso li:first-child:after{
+	content: none;
+}
+
+#formPediatria #progreso li.activo:before, #formPediatria #progreso li.activo:after{
+	background: rgba(40, 208, 141, 0.9);
+	color: white;
+	text-shadow: 0 1px 0;
+}
+
+textarea{
+    margin: 10px;
+    width: 500px;
+    height: 90px;
+    font-family: sans-serif, Arial, Verdana;
+    font-size: 12px;
+}
+#modal3 input{
+    margin: 5px;
+    font-family: sans-serif, Arial, Verdana;
+    font-size: 12px;
+}
+#modal3 select{
+    margin: 5px;
+    font-family: sans-serif, Arial, Verdana;
+    font-size: 12px;
+}
+#modal2 input{
+    margin: 5px;
+    font-family: sans-serif, Arial, Verdana;
+    font-size: 12px;
+}
+#modal2 select{
+    margin: 5px;
+    font-family: sans-serif, Arial, Verdana;
+    font-size: 12px;
+}
+
+#modal1 input{
+    margin: 5px;
+    font-family: sans-serif, Arial, Verdana;
+    font-size: 12px;
+}
+#modal1 select{
+    margin: 5px;
+    font-family: sans-serif, Arial, Verdana;
+    font-size: 12px;
+}
+/*******************************************************************************/
+/*Estilo del formulario Medicina General*/
+
+#formMedGenral{
+	width:1000px;
+	margin:40px auto;
+	text-align:center;
+	position:relative;
+}
+
+#formMedGenral h5, #formMedGenral h3{
+	font:22px "Trebuchet MS", tahoma, arial;
+	color: black;
+	width: 100%;
+	float:left;
+	font-size: 12;
+	font-family: Arial, Sans-serif, Verdana;
+	text-align:left;
+	margin-bottom:4%;
+}
+
+#formMedGenral h3{
+    color:#333; font-size:20px;
+    
+}
+#formMedGenral fieldset{
+    background: white;
+    border: none;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    box-shadow: 0 0 15px 1px rgba(0,0,0, 0.4);
+    padding: 10px 30px;
+    box-sizing: border-box;
+    width: 99%;
+    right: 30px;
+    margin: 15 0%;
+    position:absolute;/*comentar para que los formularios se muestren desplegados*/
+}
+/*comentar para que los formularios se muestren desplegados*/
+#formMedGenral fieldset:not(:first-of-type){
+	display:none;
+}
+
+#formMedGenral input{
+	padding: 5px;
+	border: 1px solid rgba(46, 156, 133, 0.5);
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	outline: none;
+	box-sizing: border-box;
+	font: 14px "Trebuchet MS", tahoma, arial;
+	color: black;
+	margin-bottom: 5px;
+}
+#buttonOne{
+    color: rgba(0, 0, 0, 0.7);
+    width: 10%;
+    text-transform: uppercase;
+    padding:12px 0;
+    font-weight: bold;
+    margin-left: 55%;
+}
+#btnOne{
+    color: rgba(0, 0, 0, 0.7);
+    width: 10%;
+    text-transform: uppercase;
+    padding:12px 0;
+    font-weight: bold;
+}
+#btnPreview{
+    color: rgba(0, 0, 0, 0.7);
+    width: 10%;
+    text-transform: uppercase;
+    padding:12px 0;
+    font-weight: bold;
+    margin-left: 55%;
+}
+
+#btnTwo{
+    margin-left: 55%;
+}
+
+.radio label{
+    font-size: 10px;
+}
+
+label placeholder{
+    font-size: 12px;
+    font-family: Arial;
+}
+
+#formMedGenral #listado{
+	margin-bottom:30px;
+	overflow: hidden;
+	counter-reset: step;
+}
+
+#formMedGenral #listado li{
+	list-style-type:none;
+	color:gray;
+	font-weight:bold;
+	font-size: 12px;
+	float:left;
+	width:30%;
+	position:relative;
+	
+}
+
+#formMedGenral #listado li:before{
+	content: counter(step);
+	counter-increment: step;
+	width:30px;
+	display:block;
+	line-height: 20px;
+	background: rgba(39, 174, 96, 0.4);
+	color: #333;
+	border-radius: 30px;
+	-moz-border-radius: 30px;
+	-webkit-border-radius: 30px;
+	margin: 0 auto 10px auto;
+}
+
+#formMedGenral #listado li:after{
+	content: '';
+	width: 100%;
+	background: #cfd8dc;
+	height: 2px;
+	position: absolute;
+	top: 10px;
+	left: -50%;
+	z-index: -1;
+}
+
+#formMedGenral #listado li:first-child:after{
+	content: none;
+}
+
+#formMedGenral #listado li.activo:before, #formMedGenral #listado li.activo:after{
+	background: rgba(40, 208, 141, 0.9);
+	color: white;
+	text-shadow: 0 1px 0;
+}
+#checkbox{
+	left: 70px;
+}
+#leyenda{
+	color:black;
+	font-size: 15px;
+	font-family: Arial, sans-serif, Verdana, tahoma;
+	text-align: center;
+}
+#gin{
+	font-family: sans-serif;
+	font-size: 10px;
+	text-align: center;
+}
+#Mg{
+	right: auto;
+}
+
+h6{
+    font-size: 10px;
+    font-family: sans-serif, Arial, Verdana, tahoma;
+}
+
+#modMed{
+	padding-top: 10px;
+	width: 70%;
+	height: 90%;
+	right: -30px;
+}
+
+/*******************************************************************************/
+/*ESTILO DE L BARRA DE PROGRESO DEL FORMULARIO*/
+body{ 
+    margin-top:40px; 
+}
+
+.stepwizard-step p {
+    margin-top: 10px;
+}
+
+.stepwizard-row {
+    display: table-row;
+}
+
+.stepwizard {
+    display: table;
+    width: 100%;
+    position: relative;
+}
+
+.stepwizard-step button[disabled] {
+    opacity: 1 !important;
+    filter: alpha(opacity=100) !important;
+}
+
+.stepwizard-row:before {
+    top: 14px;
+    bottom: 0;
+    position: absolute;
+    content: " ";
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+    z-order: 0;
+
+}
+
+.stepwizard-step {
+    display: table-cell;
+    text-align: center;
+    position: relative;
+}
+
+.btn-circle {
+  width: 40px;
+  height: 30px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 1.428571429;
+  border-radius: 15px;
+}
+
+
+.social {
+	position: fixed; /* Hacemos que la posición en pantalla sea fija para que siempre se muestre en pantalla*/
+	right: 0; /* Establecemos la barra en la derecha */
+	top: 300px; /* Bajamos la barra 300px de arriba a abajo */
+	z-index: 2000; /* Utilizamos la propiedad z-index para que no se superponga algún otro elemento como sliders, galerías, etc */
+}
+ 
+	.social {
+	position: fixed; /* Hacemos que la posición en pantalla sea fija para que siempre se muestre en pantalla*/
+	right: 0; /* Establecemos la barra en la derecha */
+	top: 300px; /* Bajamos la barra 300px de arriba a abajo */
+	z-index: 2000; /* Utilizamos la propiedad z-index para que no se superponga algún otro elemento como sliders, galerías, etc */
+}
+ 
+.social ul {
+	list-style: none;
+}
+ 
+.social ul li a {
+	display: inline-block;
+	color:#fff;
+	background: #000;
+	padding: 10px 15px;
+	text-decoration: none;
+	-webkit-transition:all 500ms ease;
+	-o-transition:all 500ms ease;
+	transition:all 500ms ease; /* Establecemos una transición a todas las propiedades */
+}
+ 
+.social ul li .icon-facebook {background:rgba(0, 118, 253, 0.7);} /* Establecemos los colores de cada red social, aprovechando su class */
+.social ul li .icon-twitter {background: rgba(0, 125, 40, 0.7);}
+.social ul li .icon-googleplus {background: rgba(251, 97, 39, 0.7);}
+.social ul li .icon-pinterest {background: rgba(249, 0, 0, 0.7);}
+.social ul li .icon-mail {background: #666666;}
+
+ 
+.social ul li a:hover {
+	background: rgba(0, 82, 39, 0.7); /* Cambiamos el fondo cuando el usuario pase el mouse */
+	padding: 10px 30px; /* Hacemos mas grande el espacio cuando el usuario pase el mouse */
+}
+
+/* estio para poner diesable el boton de las citas en el menu principal */
+
+    a[disabled="disabled"] {
+        pointer-events: none;
+    }
